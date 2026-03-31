@@ -1,103 +1,127 @@
+import { useState } from "react"
 import { LiquidCtaButton } from "@/components/buttons/LiquidCtaButton"
-import { Sparkles, ArrowRight } from "lucide-react"
+
+const GOLD_RATE = 0.69 // rub per 1 gold
+
+const goldOptions = [500, 1000, 1500, 2000, 3000, 5000, 10000]
 
 export function HeroSection() {
+  const [gold, setGold] = useState(1500)
+  const [nickname, setNickname] = useState("")
+
+  const price = (gold * GOLD_RATE).toFixed(2)
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20 relative">
-      {/* Background gradient overlay */}
+    <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 pb-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/50 via-transparent to-transparent" />
 
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto">
-        {/* Badge - customize your announcement */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/80 border border-zinc-800 mb-8">
-          <Sparkles className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm text-zinc-400">Встречайте v2.0 — теперь с ИИ</span>
-        </div>
-
-        {/* Headline - customize your value proposition */}
-        <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6">
-          <span className="text-zinc-100 block">Создавай быстрее.</span>
-          <span className="bg-gradient-to-r from-zinc-500 via-zinc-300 to-zinc-500 bg-clip-text text-transparent">
-            Запускай умнее.
+      <div className="relative z-10 text-center max-w-2xl mx-auto w-full">
+        {/* Headline */}
+        <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">
+          <span className="text-zinc-100 block">Купите Голду в</span>
+          <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+            Standoff 2
           </span>
+          <span className="text-zinc-100 block text-3xl md:text-4xl mt-1">на Самом Лучшем Сайте</span>
         </h1>
 
-        {/* Subheadline - describe your product */}
-        <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed text-balance">
-          Единая платформа, которая помогает командам создавать, развертывать и масштабировать продукты в 10 раз быстрее. Без сложностей, только результат.
-        </p>
-
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="#pricing">
-            <LiquidCtaButton>Попробовать бесплатно</LiquidCtaButton>
-          </a>
-          <a
-            href="#features"
-            className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-zinc-400 hover:text-zinc-100 transition-colors"
-          >
-            <span>Как это работает</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-900/40 border border-emerald-700/50 mb-6 w-full max-w-md justify-center">
+          <span className="text-lg">🔥</span>
+          <span className="text-sm font-semibold text-emerald-300">Самая низкая цена на рынке!</span>
+          <span className="text-lg">🔥</span>
         </div>
 
-        {/* Social proof */}
-        <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-3">
-              <img
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
-                alt="User avatar"
-                className="w-10 h-10 rounded-full border-2 border-zinc-950 hover:-translate-y-1 transition object-cover z-[1]"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200"
-                alt="User avatar"
-                className="w-10 h-10 rounded-full border-2 border-zinc-950 hover:-translate-y-1 transition object-cover z-[2]"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&h=200&auto=format&fit=crop"
-                alt="User avatar"
-                className="w-10 h-10 rounded-full border-2 border-zinc-950 hover:-translate-y-1 transition object-cover z-[3]"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200"
-                alt="User avatar"
-                className="w-10 h-10 rounded-full border-2 border-zinc-950 hover:-translate-y-1 transition object-cover z-[4]"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200"
-                alt="User avatar"
-                className="w-10 h-10 rounded-full border-2 border-zinc-950 hover:-translate-y-1 transition object-cover z-[5]"
-              />
-            </div>
-            <div className="h-8 w-px bg-zinc-800" />
-            <div className="flex flex-col items-start">
-              <div className="flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <svg
-                    key={i}
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="#FACC15"
-                    stroke="#FACC15"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" />
-                  </svg>
-                ))}
-                <span className="text-zinc-400 font-medium ml-1 text-sm">5.0</span>
+        {/* Trust badges */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8">
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex-1 justify-center">
+            <span className="text-xl">🛡️</span>
+            <span className="text-sm font-medium text-zinc-200">Безопасно</span>
+          </div>
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex-1 justify-center">
+            <span className="text-xl">🚀</span>
+            <span className="text-sm font-medium text-zinc-200">Быстро</span>
+          </div>
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex-1 justify-center">
+            <span className="text-xl">📞</span>
+            <span className="text-sm font-medium text-zinc-200">Связь 24/7</span>
+          </div>
+        </div>
+
+        {/* Calculator */}
+        <div className="space-y-3 text-left mb-4">
+          {/* You Pay */}
+          <div className="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800">
+            <p className="text-sm text-zinc-500 mb-1">Ты Платишь</p>
+            <div className="flex items-center justify-between">
+              <span className="text-3xl font-bold text-zinc-100">{Number(price).toLocaleString("ru-RU", { minimumFractionDigits: 2 })}</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-800 border border-zinc-700">
+                <span className="text-sm font-medium text-zinc-300">₽ Рубли</span>
               </div>
-              <p className="text-sm text-zinc-500">
-                Нам доверяют <span className="text-zinc-300 font-medium">10 000+</span> разработчиков
-              </p>
             </div>
           </div>
+
+          {/* You Buy */}
+          <div className="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800">
+            <p className="text-sm text-zinc-500 mb-1">Ты Покупаешь</p>
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-3xl font-bold text-zinc-100">{gold.toLocaleString("ru-RU")}</span>
+              <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-800 border border-zinc-700">
+                <span className="text-yellow-400 text-base">💰</span>
+                <span className="text-sm font-medium text-zinc-300">Gold</span>
+              </div>
+            </div>
+            {/* Slider */}
+            <input
+              type="range"
+              min={500}
+              max={10000}
+              step={500}
+              value={gold}
+              onChange={(e) => setGold(Number(e.target.value))}
+              className="w-full h-2 rounded-full appearance-none cursor-pointer accent-blue-500"
+              style={{
+                background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${((gold - 500) / (10000 - 500)) * 100}%, #3f3f46 ${((gold - 500) / (10000 - 500)) * 100}%, #3f3f46 100%)`
+              }}
+            />
+            {/* Quick select */}
+            <div className="flex flex-wrap gap-2 mt-3">
+              {goldOptions.map((opt) => (
+                <button
+                  key={opt}
+                  onClick={() => setGold(opt)}
+                  className={`px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    gold === opt
+                      ? "bg-blue-600 text-white"
+                      : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200"
+                  }`}
+                >
+                  {opt.toLocaleString("ru-RU")}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Nickname */}
+          <div className="p-5 rounded-2xl bg-zinc-900/80 border border-zinc-800">
+            <p className="text-sm text-zinc-500 mb-2">Никнейм или ID в Standoff 2:</p>
+            <input
+              type="text"
+              placeholder="Введите Никнейм или ID*"
+              value={nickname}
+              onChange={(e) => setNickname(e.target.value)}
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-blue-500 transition-colors"
+            />
+          </div>
+        </div>
+
+        {/* Buy Button */}
+        <LiquidCtaButton className="w-full">Купить Голду</LiquidCtaButton>
+
+        {/* Social proof */}
+        <div className="mt-8 flex items-center justify-center gap-2 text-sm text-zinc-500">
+          <span>⭐⭐⭐⭐⭐</span>
+          <span>Нам доверяют <span className="text-zinc-300 font-medium">50 000+</span> игроков</span>
         </div>
       </div>
     </section>

@@ -3,58 +3,58 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-column"
 
 const testimonials = [
   {
-    text: "Velocite сократил наш пайплайн деплоя с 4 часов до 12 минут. Автоматизация кардинально изменила наш CI/CD процесс.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    name: "Анна Смирнова",
-    role: "CTO в TechFlow Solutions",
+    text: "Купил 3000 голды — пришла за 3 минуты. Самый быстрый магазин, которым я пользовался!",
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face",
+    name: "Артём К.",
+    role: "Игрок Standoff 2",
   },
   {
-    text: "Мы изучили 15 платформ, прежде чем выбрать Velocite. ROI стал очевиден уже в первый месяц использования.",
+    text: "Цены реально ниже, чем в других местах. Беру голду только здесь уже полгода.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    name: "Максим Волков",
-    role: "VP Engineering в Quantum Dynamics",
+    name: "Никита В.",
+    role: "Постоянный клиент",
   },
   {
-    text: "Наша команда выпустила в 3 раза больше фич за квартал. Инструменты совместной работы сделали удаленку бесшовной.",
+    text: "Поддержка ответила моментально, помогли с заказом. Всё честно и без обмана.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    name: "Елена Родригес",
-    role: "Head of Product в Alpine Ventures",
+    name: "Алина М.",
+    role: "Игрок Standoff 2",
   },
   {
-    text: "Онбординг прошел невероятно гладко. Вся команда разработки стала продуктивной уже на первой неделе.",
+    text: "Заказывал уже раз 10. Ни разу не было проблем. Рекомендую всем друзьям!",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    name: "Дмитрий Парк",
-    role: "IT-директор в Stellar Analytics",
+    name: "Данила Р.",
+    role: "Постоянный клиент",
   },
   {
-    text: "Поддержка клиентов на высоте. Помогли мигрировать всю инфраструктуру с нулевым даунтаймом.",
+    text: "Думал, что мошенники, но рискнул — и не пожалел. Голда пришла быстро, аккаунт цел.",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    name: "Анна Ковальски",
-    role: "Операционный директор в Nova Industries",
+    name: "Максим Ш.",
+    role: "Игрок Standoff 2",
   },
   {
-    text: "API-интеграции сэкономили сотни часов разработки. Все работает из коробки.",
+    text: "Лучший курс на рынке! Экономлю по 200-300 рублей на каждом заказе.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    name: "Алексей Вилсон",
-    role: "CEO в Meridian Tech",
+    name: "Егор Л.",
+    role: "Постоянный клиент",
   },
   {
-    text: "Velocite изменил наш подход к релизам. Откаты, занимавшие часы, теперь происходят за секунды.",
+    text: "Купил 5000 голды для скинов — всё пришло, скины купил. Сайт огонь 🔥",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
-    name: "Лиза Томпсон",
-    role: "DevOps Lead в Cascade Systems",
+    name: "Влад Н.",
+    role: "Игрок Standoff 2",
   },
   {
-    text: "Аналитический дашборд дает инсайты, которых у нас раньше не было. Data-driven решения стали нормой.",
+    text: "Обратился в поддержку ночью — ответили за 2 минуты. Вот это сервис!",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
-    name: "Михаил Чен",
-    role: "Product Manager в Vertex Labs",
+    name: "Иван С.",
+    role: "Клиент",
   },
   {
-    text: "Частота деплоев выросла в 5 раз без дополнительных затрат на инфраструктуру. Впечатляющая платформа.",
+    text: "Покупаю регулярно. Цена стабильная, доставка мгновенная. Топовый магазин.",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    name: "Рахиль Ким",
-    role: "Engineering Manager в Prism Digital",
+    name: "Катя П.",
+    role: "Постоянный клиент",
   },
 ]
 
@@ -62,7 +62,7 @@ const firstColumn = testimonials.slice(0, 3)
 const secondColumn = testimonials.slice(3, 6)
 const thirdColumn = testimonials.slice(6, 9)
 
-const logos = ["TechFlow", "Quantum Dynamics", "Alpine Ventures", "Stellar Analytics", "Nova Industries", "Meridian Tech"]
+const logos = ["Standoff 2", "Лучший курс", "50 000+ клиентов", "Доставка за 3 мин", "Поддержка 24/7", "Безопасно"]
 
 export function TestimonialsSection() {
   return (
@@ -78,10 +78,10 @@ export function TestimonialsSection() {
           <div className="border border-zinc-800 py-1.5 px-4 rounded-full text-sm text-zinc-400">Отзывы</div>
 
           <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-100 mt-6 text-center tracking-tight">
-            Что говорят пользователи
+            Что говорят игроки
           </h2>
           <p className="text-center mt-4 text-zinc-500 text-lg text-balance">
-            Узнайте мнение наших клиентов о платформе.
+            Тысячи довольных клиентов уже купили голду у нас.
           </p>
         </motion.div>
 
@@ -92,22 +92,13 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-16 pt-16 border-t border-zinc-800/50">
-          <p className="text-center text-sm text-zinc-500 mb-8">Нам доверяют лидеры индустрии</p>
+          <p className="text-center text-sm text-zinc-500 mb-8">Нас выбирают игроки по всей России</p>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
               className="flex gap-12 md:gap-16"
-              animate={{
-                x: ["0%", "-50%"],
-              }}
-              transition={{
-                x: {
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{ x: { duration: 20, repeat: Infinity, ease: "linear" } }}
             >
-              {/* Duplicate logos for seamless loop */}
               {[...logos, ...logos].map((logo, index) => (
                 <span
                   key={`${logo}-${index}`}
