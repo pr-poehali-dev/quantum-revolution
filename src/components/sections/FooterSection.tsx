@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon"
 const footerLinks = {
   shop: [
     { label: "Купить голду", href: "#" },
-    { label: "Цены", href: "#pricing" },
+
     { label: "Калькулятор", href: "#" },
     { label: "Акции", href: "#" },
   ],

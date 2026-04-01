@@ -1,7 +1,7 @@
 const navLinks = [
   { href: "#features", label: "Преимущества" },
   { href: "#testimonials", label: "Отзывы" },
-  { href: "#pricing", label: "Цены" },
+
 ]
 
 export function Navbar() {
@@ -22,7 +22,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#pricing"
+            href="#hero"
             className="ml-2 px-4 py-1.5 text-sm rounded-full bg-yellow-400 text-zinc-900 font-medium hover:bg-yellow-300 transition-colors"
           >
             Купить
